@@ -1,0 +1,23 @@
+# Gmail API
+google-auth-oauthlib==1.2.0
+google-auth-httplib2==0.2.0
+google-api-python-client==2.116.0
+
+# Twitter API (X API v2)
+tweepy==4.14.0
+
+# Data processing
+python-dotenv==1.0.1
+schedule==1.2.1
+
+# Security and encryption
+cryptography==42.0.2
+
+# Logging and configuration
+pyyaml==6.0.1
+
+# Telegram Bot
+python-telegram-bot==20.7
+
+# HTTP Requests
+requests==2.32.3

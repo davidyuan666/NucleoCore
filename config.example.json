@@ -1,0 +1,21 @@
+{
+  "email": {
+    "rate_limit": {
+      "max_emails_per_day": 200
+    }
+  },
+  "twitter": {
+    "rate_limit": {
+      "max_tweets_per_day": 50,
+      "min_interval_seconds": 300
+    }
+  },
+  "schedule": {
+    "check_email_interval": "*/30 * * * *",
+    "backup_interval": "0 2 * * *"
+  },
+  "safety": {
+    "require_manual_approval": true,
+    "dry_run_mode": true
+  }
+}

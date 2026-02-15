@@ -1,0 +1,28 @@
+# 环境变量和凭证
+.env
+config.json
+credentials/
+*.json
+!config.example.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# 数据和日志
+data/
+logs/
+backups/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
