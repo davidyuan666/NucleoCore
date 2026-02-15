@@ -438,6 +438,11 @@ class TelegramBot:
     async def send_notification(self, message: str):
         """发送通知消息"""
         try:
+            # 如果 application 未初始化，先初始化
+            if not self.application:
+                from telegram.ext import Application
+                self.application = Application.builder().token(self.bot_token).build()
+
             await self.application.bot.send_message(
                 chat_id=self.chat_id,
                 text=message

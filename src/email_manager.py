@@ -84,7 +84,10 @@ class EmailManager:
 
         try:
             # 选择收件箱
-            mail.select('INBOX')
+            status, _ = mail.select('INBOX')
+            if status != 'OK':
+                self.logger.error("选择收件箱失败")
+                return []
 
             # 搜索未读邮件
             status, messages = mail.search(None, 'UNSEEN')
