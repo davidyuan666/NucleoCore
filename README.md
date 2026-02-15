@@ -1,19 +1,28 @@
-# 163 Email and Twitter Account Manager
+# NucleoCore
 
-安全合规的 163 邮箱和 Twitter 账户管理工具
+蛋白质晶体管 - Social Account Manager
+
+安全合规的 163 邮箱和 Twitter 账户管理工具，通过 Telegram Bot 远程控制
 
 ## 功能特性
 
 - **163 邮箱管理**
   - 自动读取和分类邮件
-  - 定时发送邮件
+  - 发送邮件到指定地址
   - 邮件备份和导出
-  - 标记已读/未读
+  - 通过 Telegram 控制
 
 - **Twitter 管理**
-  - 定时发布推文
-  - 读取和分类推文
-  - 数据备份
+  - 发布推文（自动添加签名）
+  - 查看推文列表
+  - 查看账户信息
+  - 通过 RapidAPI 查看任意用户信息
+
+- **Telegram Bot 控制**
+  - 远程发送推文
+  - 远程查看邮件
+  - 查看系统状态
+  - 交互式确认机制
 
 ## 安全设计
 
@@ -27,9 +36,7 @@
 
 1. 安装依赖：`pip install -r requirements.txt`
 2. 配置凭证：复制 `.env.example` 到 `.env` 并填入你的信息
-3. 配置设置：复制 `config.example.json` 到 `config.json`
-4. 运行演示：`python demo.py`
-5. 运行真实服务：`python main.py`
+3. 启动 Telegram Bot：`python telegram_bot_start.py`
 
 ## 163 邮箱配置
 
@@ -40,3 +47,16 @@
 5. 在 `.env` 文件中填入邮箱地址和授权码
 
 详见 `docs/setup.md`
+
+## Telegram Bot 命令
+
+- `/start` - 开始使用
+- `/help` - 帮助信息
+- `/tweet` - 发送推文
+- `/mytweets` - 查看我的推文
+- `/twitterinfo` - Twitter 账户信息
+- `/userinfo` - 查看任意用户信息（RapidAPI）
+- `/checkemail` - 检查邮件
+- `/status` - 系统状态
+
+直接发送文字消息将作为推文发布（需确认）
